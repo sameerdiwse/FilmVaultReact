@@ -1,19 +1,30 @@
 import MovieCard from "./MovieCard";
+import axios from "axios";
+import { useEffect, useState } from "react";
 function Movies() {
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/trending/movie/day?page=3&language=en-US&api_key=ada610fb1ab5ea8ed0a9571019e3af84`,
+      )
+      .then(function (response) {
+        console.log(response.data.results);
+        setMovies(response.data.results);
+      });
+  }, []);
   return (
     <>
       <div className="flex flex-wrap justify-around">
-        <MovieCard />
-
-        <MovieCard />
-
-        <MovieCard />
-
-        <MovieCard />
-
-        <MovieCard />
-
-        <MovieCard />
+        {movies.map((result) => {
+          //console.log(result.poster_path);
+          return (
+            <MovieCard
+              posterPath={result.poster_path}
+              movieName={result.original_title}
+            />
+          );
+        })}
       </div>
     </>
   );
