@@ -10,3 +10,21 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# 🎬 Film Vault
+
+Film Vault is a React-based movie browser app powered by the [TMDB API](https://www.themoviedb.org/). It allows users to explore popular films, and navigate through pages of results with a smooth UI.
+
+## 🚀 Features
+
+- 🔍 Browse popular movies using TMDB API
+- 📄 Pagination to navigate through movie lists
+- 🎥 Movie posters, titles
+- ⚙️ Built with React + TailwindCSS
+  
+## 📦 Tech Stack
+
+- **Frontend:** React (Hooks, JSX)
+- **Styling:** Tailwind CSS
+- **API:** [TMDB (The Movie Database)](https://www.themoviedb.org/)
+  
