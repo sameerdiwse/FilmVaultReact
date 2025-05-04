@@ -3,11 +3,11 @@ function Pagination({ pageNumber, handleNext, handlePrev }) {
   return (
     <div className="bg-gray-800/60 flex justify-center">
       <div onClick={handlePrev}>
-        <i class="fa-solid fa-arrow-left px-5"></i>
+        <i className="fa-solid fa-arrow-left px-5 cursor-pointer"></i>
       </div>
-      <div className="font-bold">{pageNumber}</div>
+      <div className="font-bold cursor-default">{pageNumber}</div>
       <div onClick={handleNext}>
-        <i class="fa-solid fa-arrow-right px-5"></i>
+        <i className="fa-solid fa-arrow-right px-5 cursor-pointer"></i>
       </div>
     </div>
   );

@@ -10,10 +10,11 @@ function Movies() {
   };
 
   const handlePrev = () => {
-    if (pageNumber == 1) {
+    if (pageNumber === 1) {
       setPageNumber(1);
+    } else {
+      setPageNumber(pageNumber - 1);
     }
-    setPageNumber(pageNumber - 1);
   };
 
   useEffect(() => {
